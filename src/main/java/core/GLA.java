@@ -3,6 +3,9 @@ package core;
 import genius.SongSearch;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class GLA {
 
@@ -18,10 +21,15 @@ public class GLA {
 
     public static void main(String[] args) throws Exception {
         GLA gla = new GLA();
+        //Scanner s = new Scanner;
         System.out.println("Searching...");
         long startMs = System.currentTimeMillis();
-        System.out.println(gla.search("Kygo").getHits().get(0).fetchLyrics());
-        System.out.println(System.currentTimeMillis() - startMs + "ms");
+
+        String lyrics = gla.search("Kygo").getHits().get(0).fetchLyrics();
+        String[] words = lyrics.split(" ");
+        System.out.println(words[6]);
+
+
     }
 
 }
