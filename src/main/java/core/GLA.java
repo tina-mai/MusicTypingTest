@@ -21,14 +21,35 @@ public class GLA {
 
     public static void main(String[] args) throws Exception {
         GLA gla = new GLA();
-        //Scanner s = new Scanner;
         System.out.println("Searching...");
         long startMs = System.currentTimeMillis();
 
         String lyrics = gla.search("Kygo").getHits().get(0).fetchLyrics();
-        String[] words = lyrics.split(" ");
-        System.out.println(words[6]);
+        lyrics = lyrics.replaceAll("\n", " ");
 
+        String[] unformatted = lyrics.split(" ");
+        ArrayList<String> words = new ArrayList<>();
+
+        System.out.println(lyrics);
+        System.out.println("————————————");
+
+        boolean gtg = true;
+
+        for (int i=0; i < unformatted.length; i++) {
+
+            String word = unformatted[i];
+            if (word.contains("[")) {
+                gtg = false;
+            } else if (word.contains("]")) {
+                gtg = true;
+            } else if (gtg) {
+                words.add(word);
+            }
+        }
+
+        for (String w: words) {
+            System.out.print(w + " ");
+        }
 
     }
 
