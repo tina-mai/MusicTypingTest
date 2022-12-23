@@ -1,6 +1,19 @@
+# LYRIC TYPING TEST
+
+DIRECTIONS:
+- Run TypingTest.java
+- In the terminal, type in the artist/singer you want to type to. We'll find their most popular song (according to Genius) and display 5 words at a time on the screen
+- Once the song has loaded, go to the processing window and press ENTER to start (timer will start once you press ENTER)
+- Type until the timer reaches one minute (you'll be stopped once time runs out)
+- Note: this is case-sensitive, spaces and punctuation matter, and you'll need to type a SPACE at the end of a line to move on
+- If you make a mistake, check the terminal to see where you're at (don't worry about deleting your mistakes)
+
+WARNING: There's no validation...
+We recommend "Taylor Swift" for testing :)
+
 [![](https://jitpack.io/v/LowLevelSubmarine/GeniusLyricsAPI.svg)](https://jitpack.io/#LowLevelSubmarine/GeniusLyricsAPI)
 
-# Genius Lyrics API (not-official)
+# About Genius Lyrics API (not-official)
 This API is made to search and parse lyrics from the web. The Genius library should provide all the songs your users will ever search for. It uses genius's embed page to load lyrics without getting rate-limited, and caches every parsed lyrics and search results (runtime).
 
 ## Easy to use!
